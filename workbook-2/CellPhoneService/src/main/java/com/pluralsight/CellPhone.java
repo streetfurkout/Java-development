@@ -1,11 +1,11 @@
 package com.pluralsight;
-public class CellPhoneService {
+public class CellPhone {
     private int serialNumber;
     private String model;
     private String carrier;
     private String phoneNumber;
     private String owner;
-    public CellPhoneService() {
+    public CellPhone() {
         serialNumber = 0;
         model = "";
         carrier = "";

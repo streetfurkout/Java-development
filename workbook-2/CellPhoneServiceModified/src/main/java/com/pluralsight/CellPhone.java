@@ -1,12 +1,11 @@
 package com.pluralsight;
 
-public class CellPhoneServiceModified {
-    private int serialNumber;
+public class CellPhone {private int serialNumber;
     private String model;
     private String carrier;
     private String phoneNumber;
     private String owner;
-    public CellPhoneServiceModified() {
+    public CellPhone() {
         serialNumber = 0;
         model = "";
         carrier = "";
@@ -47,3 +46,4 @@ public class CellPhoneServiceModified {
         System.out.println("\n" + owner + "'s phone is calling " + number);
     }
 }
+
