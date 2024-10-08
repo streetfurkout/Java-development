@@ -9,5 +9,8 @@
         <module name="FamousQuotes" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FamousQuotes" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
