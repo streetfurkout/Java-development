@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class FamousQuotes {
     public static void main(String[] args) {
+        //hdjhdj
         String[] quotes = {
                 "The only limit to our realization of tomorrow is our doubts of today. - Franklin D. Roosevelt",
                 "In the middle of every difficulty lies opportunity. - Albert Einstein",
