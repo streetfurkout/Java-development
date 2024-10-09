@@ -24,7 +24,7 @@ public class SearchInventory {
         try() {
 
 
-            //there I need to use while 
+            //there I need to use while
 
 
     }
