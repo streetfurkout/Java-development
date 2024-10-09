@@ -29,7 +29,17 @@ public class FormatDates {
 // So, later on I will try to do it.
         }*/
 
-            Scanner scanner = new Scanner(System.in);
+            //Scanner regular = new Scanner(System.in);
+            //System.out.println("Please enter a date. (mm/dd/yyy ");
+            //String date = regular.nextLine();
+
+            //DateTimeFormatter format1 = DateTimeFormatter.ofPattern(regular);
+
+            String userInput;
+            DateTimeFormatter formatter;
+            userInput = 
+
+
         }
     }
 
