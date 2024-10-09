@@ -19,6 +19,16 @@ public class SearchInventory {
         inventory.add(new Product(3456, "Screwdriver", 12.99));
         inventory.add(new Product(6789, "Drill", 59.99));
     }
+
+    public void loadToInventoryWithFile("i need to write here sth" );
+        try() {
+
+
+            //there I need to use while 
+
+
+    }
 }
+
 
 
