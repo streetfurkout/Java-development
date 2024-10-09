@@ -37,7 +37,7 @@ public class FormatDates {
 
             String userInput;
             DateTimeFormatter formatter;
-            userInput = 
+            userInput =
 
 
         }
