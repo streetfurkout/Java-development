@@ -44,5 +44,5 @@ public class Reservations {
     public void setWeekend(boolean weekend) {
         isWeekend = weekend;
     }
-    
+
 }
