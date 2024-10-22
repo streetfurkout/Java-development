@@ -5,7 +5,6 @@ public class Room {
     private double price;
     private boolean isOccupied;
     private boolean isDirty;
-    private String roomId;
 
     public Room(int numberOfBeds, double price) {
         this.numberOfBeds = numberOfBeds;
@@ -35,14 +34,19 @@ public class Room {
     }
 
     public void checkIn() {
-        if(isAvailable()) {
-            isOccupied = false;
-            System.out.println("Checked in to room" + roomId);
-        }else {
-            System.out.println("room is not available");
+        if (!isOccupied && !isDirty) {
+            isOccupied = true;
+            isDirty = true;
         }
     }
-    public void checkOut() {
-        if(is)
+
+    public void checkout() {
+        isOccupied = false;
+    }
+
+    public void cleanRoom() {
+        if (!isOccupied) {
+            isDirty = false;
+        }
     }
 }

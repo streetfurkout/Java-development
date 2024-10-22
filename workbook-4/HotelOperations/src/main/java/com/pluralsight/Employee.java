@@ -6,26 +6,15 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+    private double startTime;
 
-    public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
+    public Employee(int employeeId, String name, String department, double payRate) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
         this.payRate = payRate;
-        this.hoursWorked = hoursWorked;
-    }
-
-    public double getRegularHours() {
-        return Math.min(hoursWorked, 40);
-    }
-
-    public double getOverTimeHours() {
-        return Math.max(0, hoursWorked-40);
-    }
-    public double getTotalPay() {
-        double regularHours = getRegularHours();
-        double overtimeHours = getOverTimeHours();
-        return (regularHours * payRate) + (overtimeHours * payRate *1.5);
+        this.hoursWorked = 0;
+        this.startTime = 0;
     }
 
     public int getEmployeeId() {
@@ -46,5 +35,49 @@ public class Employee {
 
     public double getHoursWorked() {
         return hoursWorked;
+    }
+
+    public void punchIn(double time) {
+        startTime = time;
+    }
+
+    public void punchOut(double time) {
+        double duration = time - startTime;
+        hoursWorked += duration;
+        startTime = 0;
+    }
+
+    public void punchTimeCard(double time) {
+        if (startTime == 0) {
+            startTime = time;
+        } else {
+            double duration = time - startTime;
+            hoursWorked += duration;
+            startTime = 0;
+        }
+    }
+
+    public double getTotalPay() {
+        if (hoursWorked <= 40) {
+            return hoursWorked * payRate;
+        } else {
+            return (40 * payRate) + ((hoursWorked - 40) * (payRate * 1.5));
+        }
+    }
+
+    public double getRegularHours() {
+        if (hoursWorked <= 40) {
+            return hoursWorked;
+        } else {
+            return 40;
+        }
+    }
+
+    public double getOvertimeHours() {
+        if (hoursWorked > 40) {
+            return hoursWorked - 40;
+        } else {
+            return 0;
+        }
     }
 }
