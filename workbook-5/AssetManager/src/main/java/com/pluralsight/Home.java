@@ -7,4 +7,8 @@ public class Home extends Asset{
         super(description, dateAcquired, originalCost);
         this.address = address;
     }
+
+    public String getAddress(){
+        return address;
+    }
 }
