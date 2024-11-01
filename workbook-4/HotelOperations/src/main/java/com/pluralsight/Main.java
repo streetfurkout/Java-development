@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Main { 
+public class Main {
     public static void main(String[] args) {
         // Create a new room with two beds and a price of $100 per night
         Room room = new Room(2, 100.00);
