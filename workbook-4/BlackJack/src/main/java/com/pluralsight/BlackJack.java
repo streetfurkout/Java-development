@@ -13,6 +13,6 @@ public class BlackJack {
         System.out.println("Please enter the name of player 2: ");
         String player2 = scanner.nextLine();
 
-        
+
     }
 }
