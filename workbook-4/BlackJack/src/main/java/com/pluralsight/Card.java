@@ -28,5 +28,35 @@ public class Card {
             return "#";
         }
     }
+    public int getPointValue(){
+        if (isFaceUp) {
+            // determine point value and return it
+            switch (value) {
+                case "A":
+                    return 11;
+                case "K":
+                case "Q":
+                case "J":
+                    return 10;
+                default:
+                    return Integer.parseInt(value);
+            }
+        } else {
+            return 0;
+        }
+    }
+    public boolean isFaceUp() {
+        return isFaceUp;
+    }
+
+    public void flip() {
+        isFaceUp = !isFaceUp;
+    }
+
+    @Override
+    public String toString() {
+        return value + " of " + suit;
+    }
 }
+
 
