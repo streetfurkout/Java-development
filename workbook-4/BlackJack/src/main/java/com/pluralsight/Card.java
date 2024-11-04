@@ -11,5 +11,13 @@ public class Card {
         this.isFaceUp = isFaceUp;
     }
 
+    public String getSuit(){
+        if(isFaceUp){
+            return  suit;
+        }else {
+            return "#";
+        }
+    }
     
 }
+
