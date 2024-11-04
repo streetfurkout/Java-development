@@ -21,7 +21,15 @@ public class Deck {
     public shuffle() {
         Collection.shuffle(cards);
     }
-
+    public Card deal() {
+        // deal the top card (if there are any cards left
+        if (cards.size() > 0) {
+            Card card = cards.remove(0);
+            return card;
+        } else {
+            return null;
+        }
+    }
     }
 }
 
