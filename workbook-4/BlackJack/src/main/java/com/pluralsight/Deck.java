@@ -18,7 +18,7 @@ public class Deck {
         Card card = new Card(suit, value);
         cards.add(card);
     }
-    public shuffle() {
+    public void shuffle() {
         Collection.shuffle(cards);
     }
     public Card deal() {
@@ -29,6 +29,9 @@ public class Deck {
         } else {
             return null;
         }
+    }
+    public int getSize() {
+        return cards.size();
     }
     }
 }
