@@ -5,13 +5,16 @@ public class Room {
     private double price;
     private boolean isOccupied;
     private boolean isDirty;
+    private boolean isAvaliable;
 
     public Room(int numberOfBeds, double price) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
         this.isOccupied = false;
         this.isDirty = false;
+        this.isAvaliable = true;
     }
+
 
     public int getNumberOfBeds() {
         return numberOfBeds;
