@@ -57,6 +57,16 @@ FROM categories;
 
 -- Question 10
 
+-- Question 11
+
+SELECT LastName, FirstName
+FROM employees;
+
+-- Question 12
+
+SELECT *
+FROM employees
+WHERE Title 
 
 
 
