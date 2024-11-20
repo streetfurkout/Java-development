@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f2dccac-e84f-4eb4-a675-effe9a441bb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../workbook-4/BlackJack/src/main/java/com/pluralsight/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-4/BlackJack/src/main/java/com/pluralsight/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="67ed9df1-a95e-4dd2-a1b3-5cc1e26d8c4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../BlackJack/src/main/java/com/pluralsight/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BlackJack/src/main/java/com/pluralsight/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../workbook-6/WorkingWithInterfaces/src/main/java/com/pluralsight/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-6/WorkingWithInterfaces/src/main/java/com/pluralsight/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,25 +30,25 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2o4xGIwRJYkPDFp0ain00ToFWhs" />
+  <component name="ProjectId" id="2oQuve1HQbW3kVHBEyhjWSkjHHO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7f2dccac-e84f-4eb4-a675-effe9a441bb3" name="Changes" comment="" />
-      <created>1730142552135</created>
+      <changelist id="67ed9df1-a95e-4dd2-a1b3-5cc1e26d8c4f" name="Changes" comment="" />
+      <created>1730814353031</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1730142552135</updated>
+      <updated>1730814353031</updated>
     </task>
     <servers />
   </component>

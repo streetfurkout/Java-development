@@ -5,19 +5,21 @@ public class Card {
     private String value;
     private boolean isFaceUp;
 
-    public Card(String suit, String value, boolean isFaceUp) {
+    public Card(String suit, String value) {
         this.suit = suit;
         this.value = value;
         this.isFaceUp = false;
     }
 
-    public String getSuit(){
-        if(isFaceUp){
-            return  suit;
-        }else {
+    public String getSuit() {
+        // only return the suit if the card is face up
+        if (isFaceUp) {
+            return suit;
+        } else {
             return "#";
         }
     }
+
     public String getValue() {
         // only return the value if the card is face up
         if (isFaceUp) {
@@ -28,7 +30,9 @@ public class Card {
             return "#";
         }
     }
-    public int getPointValue(){
+
+    public int getPointValue() {
+        // only return the value if the card is face up
         if (isFaceUp) {
             // determine point value and return it
             switch (value) {
@@ -45,6 +49,7 @@ public class Card {
             return 0;
         }
     }
+
     public boolean isFaceUp() {
         return isFaceUp;
     }
@@ -58,5 +63,3 @@ public class Card {
         return value + " of " + suit;
     }
 }
-
-
