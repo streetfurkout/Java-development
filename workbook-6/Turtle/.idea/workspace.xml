@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f2dccac-e84f-4eb4-a675-effe9a441bb3" name="Changes" comment="" />
+    <list default="true" id="a23d9be9-65e8-4bd6-aabe-b49081d88fef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../workbook-5/Vehicles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-5/Vehicles/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Turtle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Turtle.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -27,25 +31,25 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2o4xGIwRJYkPDFp0ain00ToFWhs" />
+  <component name="ProjectId" id="2pIKVLjoHu6NClsTXzLOVAiIWUs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7f2dccac-e84f-4eb4-a675-effe9a441bb3" name="Changes" comment="" />
-      <created>1730142552135</created>
+      <changelist id="a23d9be9-65e8-4bd6-aabe-b49081d88fef" name="Changes" comment="" />
+      <created>1732448172350</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1730142552135</updated>
+      <updated>1732448172350</updated>
     </task>
     <servers />
   </component>

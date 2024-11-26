@@ -9,7 +9,31 @@ public class Turtle implements IMovable {
         this.currentLocation = new Point(25, 25);
         this.power = 100;
     }
-    // getters and setters not shown
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public Point getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Point currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
     public Point move(int xUnits, int yUnits) {
 // the turtle moves the number of units specified in
 // the direction specified
