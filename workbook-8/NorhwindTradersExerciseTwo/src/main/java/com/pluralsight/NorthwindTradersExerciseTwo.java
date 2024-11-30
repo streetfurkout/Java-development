@@ -2,6 +2,7 @@ package com.pluralsight;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class NorthwindTradersExerciseTwo {
@@ -25,7 +26,7 @@ public class NorthwindTradersExerciseTwo {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/sakila",
+                    "jdbc:mysql://localhost:3306/northwind",
                     username,
                     password
             );
@@ -35,6 +36,8 @@ public class NorthwindTradersExerciseTwo {
                                         FROM products;
                     """;
             PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(query);
+            Object statament;
+            ResultSet results = statament.executeQuery
 
         } catch (Exception ex) {
             System.out.println("An error has occurred!");
