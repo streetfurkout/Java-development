@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.Scanner;
 
 public class Main {
@@ -34,7 +37,26 @@ public class Main {
                 case 3:
                     displayAllCategories(username, password);
                     break;
+                case 0 :
+                    System.out.println("BYE!!");
+                    return;
+                default :
+                    System.out.println("Please try again (invalid option)");
+                    break;
             }
+        }
+    }
+
+    public static void displayAllProducts(String username, String password) {
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try(Connection connection = DriverManager.getConnection("jdbc:msql://localhost:3306/northwind",
+                    username,
+                    password);
+                PreparedStatement statement = connection.prepareStatement(
+                        "SELECT CategoryID, CategoryName FROM"
+                )
+
         }
     }
 }
