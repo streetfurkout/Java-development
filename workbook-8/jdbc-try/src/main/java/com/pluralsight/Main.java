@@ -3,6 +3,7 @@ package com.pluralsight;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class Main {
@@ -24,13 +25,24 @@ public class Main {
             try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila",
                     username,
                     password
-            );
-                 PreparedStatement preparedStatement = connection.prepareStatement(
-                         """SELECT first_name, last_name
+            )) {
+                try (PreparedStatement preparedStatement = connection.prepareStatement(
+                        """
+                                 SELECT first_name, last_name
                                  FROM customer
+                                 WHERE last_name LIKE ?
+                                 ORDER BY first_name;
                                  """
-                 )
-            ){
+                )) {
+                    preparedStatement.setString(1, lastNameToSearch);
+
+                    try(ResultSet results = preparedStatement.executeQuery()){
+                        while (results.next()) {
+                            String firstName = results.getString("first_name");
+                            String lastName = results.getString("last_name");
+                        }
+                    }
+                }
 
             }
 
