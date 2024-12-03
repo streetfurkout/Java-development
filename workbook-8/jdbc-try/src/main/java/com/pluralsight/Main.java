@@ -40,6 +40,8 @@ public class Main {
                         while (results.next()) {
                             String firstName = results.getString("first_name");
                             String lastName = results.getString("last_name");
+
+                            System.out.println("First name " + firstName);
                         }
                     }
                 }
