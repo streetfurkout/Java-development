@@ -22,11 +22,26 @@ public class DataManager {
             preparedStatement.setInt(2, phone);
 
             int rows = preparedStatement.executeUpdate();
-            System.out.println("rows added: " +rows);
+            System.out.println("rows added: " + rows);
 
-                }catch (Exception ex) {
-                ex.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
-            }
+    }
+
+    public void updateShipperPhone(int shipperId, int newPhone) {
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "UPDATE Shippers SET Phone = ? WHERE ShipperID = ?")) {
+            preparedStatement.setInt(1, newPhone);
+            preparedStatement.setInt(2, shipperId);
+
+            int rows = preparedStatement.executeUpdate();
+            System.out.println("rows added " + rows);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+
 
         }
+    }
+}
