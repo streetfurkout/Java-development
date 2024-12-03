@@ -40,8 +40,20 @@ public class DataManager {
             System.out.println("rows added " + rows);
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+    }
 
+    public void deleteShipper(int shipperId){
+        try(Connection connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "DELETE FROM shippers WHERE ShipperID = ? ")){
+            preparedStatement.setInt(1,shipperId);
+
+            int rows = preparedStatement.executeUpdate();
+        }catch (Exception ex){
+            ex.printStackTrace();
 
         }
+        
     }
 }
