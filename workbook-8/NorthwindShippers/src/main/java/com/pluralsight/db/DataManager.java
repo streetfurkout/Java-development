@@ -1,20 +1,21 @@
 package com.pluralsight.db;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class DataManager {
-
-    private DataSource datasource;
+    private DataSource dataSource;
 
     public DataManager(DataSource dataSource) {
-        this.datasource = dataSource;
+        this.dataSource = dataSource;
     }
 
-    public void insertShipper(String name, int phone) throws SQLException {
+    public void insertShipper(String name, int phone) {
 
-        try (Connection connection = datasource.getConnection();
+        try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "INSERT INTO Shippers (CompanyName, Phone) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, name);
