@@ -1,4 +1,5 @@
-package models;
+
+package com.pluralsight.models;
 
 public class CustomerOrderHistory {
     private String productName;
