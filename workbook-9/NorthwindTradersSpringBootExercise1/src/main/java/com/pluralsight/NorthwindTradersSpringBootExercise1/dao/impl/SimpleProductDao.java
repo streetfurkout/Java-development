@@ -1,4 +1,9 @@
 package com.pluralsight.NorthwindTradersSpringBootExercise1.dao.impl;
 
-public class SimpleProductDao {
+import com.pluralsight.NorthwindTradersSpringBootExercise1.dao.interfaces.IProductDao;
+import com.pluralsight.NorthwindTradersSpringBootExercise1.services.ProductService;
+
+public class SimpleProductDao implements IProductDao {
+    private 
+
 }
