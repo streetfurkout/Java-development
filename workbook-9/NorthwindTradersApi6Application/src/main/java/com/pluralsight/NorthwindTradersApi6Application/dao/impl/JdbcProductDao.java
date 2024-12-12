@@ -3,10 +3,19 @@ package com.pluralsight.NorthwindTradersApi6Application.dao.impl;
 import com.pluralsight.NorthwindTradersApi6Application.dao.interfaces.IProductDao;
 import com.pluralsight.NorthwindTradersApi6Application.models.Category;
 import com.pluralsight.NorthwindTradersApi6Application.models.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import javax.sql.DataSource;
 import java.util.List;
-
+@Component
 public class JdbcProductDao implements IProductDao {
+    private final DataSource dataSource;
+    @Autowired
+    public JdbcProductDao(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     @Override
     public List<Category> getAll() {
         return null;
