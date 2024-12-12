@@ -3,6 +3,7 @@ package com.pluralsight.NorthwindTradersApi6Application.dao.interfaces;
 import com.pluralsight.NorthwindTradersApi6Application.models.Category;
 import com.pluralsight.NorthwindTradersApi6Application.models.Product;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IProductDao {
@@ -10,7 +11,7 @@ public interface IProductDao {
 
     List<Product> getAll();
 
-    Product getById(int id);
+    Product getById(int id) throws SQLException;
     Product getInsert(Category category);
     void update (int id, Category category);
 

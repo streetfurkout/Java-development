@@ -32,21 +32,33 @@ public class JdbcCategoryDao implements ICategoryDao {
                 String categoryName = resultSet.getString("CategoryName");
                 Category category = new Category(categoryId, categoryName);
                 categories.add(category);
-
             }
-
-
         }catch (SQLException e) {
             e.printStackTrace();
         }
-
         return categories;
     }
 
     @Override
     public Category getById(int id) {
+        String sql = "SELECT * FROM Categories WHERE CategoryID = ?";
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, id);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    int categoryID = resultSet.getInt("CategoryID");
+                    String categoryName = resultSet.getString("CategoryName");
+                    Category category = new Category(categoryID, categoryName);
+                    return category;
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
         return null;
-    }
+}
 
     @Override
     public Category insert(Category category) {

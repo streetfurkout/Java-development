@@ -40,15 +40,30 @@ public abstract class JdbcProductDao implements IProductDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return products;
     }
 
-
-
-
     @Override
-    public Product getById(int id) {
+    public Product getById(int id) throws SQLException {
+        String sql = "Select * From Products Where ProductID = ? ";
+        try(
+            Connection connection = dataSource.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)){
+            statement.setInt(1, id);
+            try(ResultSet resultSet = statement.executeQuery()){
+                if(resultSet.next()){
+                    int productID = resultSet.getInt("ProductID");
+                    String productName = resultSet.getString("ProductName");
+                    int categoryID = resultSet.getInt("CategoryID");
+                    double unitPrice = resultSet.getDouble("UnitPrice");
+                    Product product = new Product(productID, productName, categoryID, unitPrice);
+                    return product;
+                }
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
