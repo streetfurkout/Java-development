@@ -6,6 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 @Component
 public class JdbcCategoryDao implements ICategoryDao {
@@ -17,6 +22,17 @@ public class JdbcCategoryDao implements ICategoryDao {
 
     @Override
     public List<Category> getAll() {
+        List<Category> categories = new ArrayList<>();
+        String sql = "Select * From Categories";
+        try {Connection connection = dataSource.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
