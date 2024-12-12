@@ -7,36 +7,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
-public class JdbcProductDao implements IProductDao {
+public abstract class JdbcProductDao implements IProductDao {
     private final DataSource dataSource;
+
     @Autowired
     public JdbcProductDao(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
     @Override
-    public List<Category> getAll() {
-        List<Product> categories = new ArrayList<>();
-        String sql = "Select * From Products";
+    public List<Product> getAll() {
+        List<Product> products = new ArrayList<>();
+        String sql = "SELECT * FROM Products";
 
-        try {
-            Connection connection = dataSource.getConnection();
-            PreparedStatement statement = connection.prepareStatement(sql);
-            ResultSet resultSet = statement.getResultSet();
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()) {
 
-        }catch (SQLException e){
+            while (resultSet.next()) {
+                int productID = resultSet.getInt("ProductID");
+                String productName = resultSet.getString("ProductName");
+                int categoryID = resultSet.getInt("CategoryID");
+                double unitPrice = resultSet.getDouble("UnitPrice");
+                Product product = new Product(productID,productName,categoryID,unitPrice);
+                products.add(product);
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return products;
     }
+
+
+
 
     @Override
     public Product getById(int id) {
@@ -50,6 +59,16 @@ public class JdbcProductDao implements IProductDao {
 
     @Override
     public void update(int id, Category category) {
+
+    }
+
+    @Override
+    public Product getInsert(Product product) {
+        return null;
+    }
+
+    @Override
+    public void update(int id, Product product) {
 
     }
 

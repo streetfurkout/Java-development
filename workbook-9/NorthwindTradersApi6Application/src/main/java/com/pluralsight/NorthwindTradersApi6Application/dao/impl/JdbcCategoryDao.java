@@ -27,13 +27,20 @@ public class JdbcCategoryDao implements ICategoryDao {
         try {Connection connection = dataSource.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                int categoryId = resultSet.getInt("CategoryID");
+                String categoryName = resultSet.getString("CategoryName");
+                Category category = new Category(categoryId, categoryName);
+                categories.add(category);
+
+            }
 
 
         }catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return categories;
     }
 
     @Override
